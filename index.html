@@ -138,10 +138,12 @@
             </div>
 
             <!-- IMAGE -->
-            <img
-              src="./assets/img/boys-category.png"
-              class="w-28 group-hover:scale-110 transition duration-300"
-            />
+            <div class="w-28 flex items-center justify-center">
+              <img
+                src="./assets/img/boys-category.png"
+                class="h-full object-contain group-hover:scale-110 transition duration-300"
+              />
+            </div>
           </div>
 
           <!-- CARD 2 -->
@@ -158,10 +160,13 @@
               </button>
             </div>
 
-            <img
-              src="./assets/img/girls-category.png"
-              class="w-28 group-hover:scale-110 transition duration-300"
-            />
+            <!-- IMAGE -->
+            <div class="w-28 flex items-center justify-center">
+              <img
+                src="./assets/img/girls-category.png"
+                class="h-full object-contain group-hover:scale-110 transition duration-300"
+              />
+            </div>
           </div>
 
           <!-- CARD 3 -->
@@ -178,10 +183,13 @@
               </button>
             </div>
 
-            <img
-              src="./assets/img/summer-category.png"
-              class="w-28 scale-150 group-hover:scale-110 transition duration-300"
-            />
+            <!-- IMAGE -->
+            <div class="h-72 flex items-end justify-center">
+              <img
+                src="./assets/img/summer-category.png"
+                class="h-full object-contain group-hover:scale-110 transition duration-300"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -190,20 +198,21 @@
     <!-- =================== category end ==================== -->
 
     <!-- PRODUCT SECTION -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="py-12 md:py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
         <!-- HEADING -->
-        <h2 class="text-2xl md:text-3xl font-semibold mb-10">Best Sellers</h2>
+        <h2 class="text-xl md:text-3xl font-semibold mb-6 md:mb-10">
+          Best Sellers
+        </h2>
 
         <!-- GRID -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <!-- ======================= CARD ======================== -->
+        <div class="grid grid-cols-2 gap-3 md:gap-6 md:grid-cols-4">
+          <!-- CARD 1 -->
           <div
-            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+            class="group bg-white rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm hover:shadow-lg transition duration-300"
           >
-            <!-- IMAGE -->
             <div
-              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+              class="h-44 md:h-72 flex items-end justify-center bg-gray-50 rounded-lg md:rounded-xl overflow-hidden"
             >
               <img
                 src="./assets/img/dangri.png"
@@ -211,24 +220,20 @@
               />
             </div>
 
-            <!-- CONTENT -->
-            <div class="mt-4 space-y-1">
-              <p class="text-xs text-gray-500">Clothing</p>
-              <h3 class="font-medium">Girls Dangri</h3>
-              <p class="font-semibold">₹799</p>
-
-              <!-- RATING -->
-              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐☆</p>
+            <div class="mt-2 md:mt-4 space-y-1">
+              <p class="text-[10px] md:text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium text-xs md:text-base">Girls Dangri</h3>
+              <p class="font-semibold text-xs md:text-base">₹799</p>
+              <p class="text-yellow-500 text-[10px] md:text-sm">⭐⭐⭐⭐☆</p>
             </div>
           </div>
 
-          <!-- COPY CARD (duplicate for more products) -->
+          <!-- CARD 2 -->
           <div
-            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+            class="group bg-white rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm hover:shadow-lg transition duration-300"
           >
-            <!-- IMAGE FIXED -->
             <div
-              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+              class="h-44 md:h-72 flex items-end justify-center bg-gray-50 rounded-lg md:rounded-xl overflow-hidden"
             >
               <img
                 src="./assets/img/sharara.png"
@@ -236,52 +241,53 @@
               />
             </div>
 
-            <!-- CONTENT -->
-            <div class="mt-4">
-              <p class="text-xs text-gray-500">Clothing</p>
-              <h3 class="font-medium">Girls Sharara</h3>
-              <p class="font-semibold">₹1299</p>
-              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</p>
+            <div class="mt-2 md:mt-4 space-y-1">
+              <p class="text-[10px] md:text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium text-xs md:text-base">Girls Sharara</h3>
+              <p class="font-semibold text-xs md:text-base">₹1299</p>
+              <p class="text-yellow-500 text-[10px] md:text-sm">⭐⭐⭐⭐⭐</p>
             </div>
           </div>
 
-          <!-- COPY CARD (duplicate for more products) -->
+          <!-- CARD 3 -->
           <div
-            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+            class="group bg-white rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm hover:shadow-lg transition duration-300"
           >
             <div
-              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+              class="h-44 md:h-72 flex items-end justify-center bg-gray-50 rounded-lg md:rounded-xl overflow-hidden"
             >
               <img
                 src="./assets/img/3pcs.png"
                 class="h-full object-contain group-hover:scale-105 transition duration-300"
               />
             </div>
-            <div class="mt-4">
-              <p class="text-xs text-gray-500">Clothing</p>
-              <h3 class="font-medium">Boys 3pcs</h3>
-              <p class="font-semibold">₹1299</p>
-              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</p>
+
+            <div class="mt-2 md:mt-4 space-y-1">
+              <p class="text-[10px] md:text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium text-xs md:text-base">Boys 3pcs</h3>
+              <p class="font-semibold text-xs md:text-base">₹1299</p>
+              <p class="text-yellow-500 text-[10px] md:text-sm">⭐⭐⭐⭐⭐</p>
             </div>
           </div>
 
-          <!-- COPY CARD (duplicate for more products) -->
+          <!-- CARD 4 -->
           <div
-            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+            class="group bg-white rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm hover:shadow-lg transition duration-300"
           >
             <div
-              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+              class="h-44 md:h-72 flex items-end justify-center bg-gray-50 rounded-lg md:rounded-xl overflow-hidden"
             >
               <img
                 src="./assets/img/shirt.png"
                 class="h-full object-contain group-hover:scale-105 transition duration-300"
               />
             </div>
-            <div class="mt-4">
-              <p class="text-xs text-gray-500">Clothing</p>
-              <h3 class="font-medium">Boys Half Shirt</h3>
-              <p class="font-semibold">₹599</p>
-              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</p>
+
+            <div class="mt-2 md:mt-4 space-y-1">
+              <p class="text-[10px] md:text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium text-xs md:text-base">Boys Half Shirt</h3>
+              <p class="font-semibold text-xs md:text-base">₹599</p>
+              <p class="text-yellow-500 text-[10px] md:text-sm">⭐⭐⭐⭐⭐</p>
             </div>
           </div>
         </div>
