@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids-Kings</title>
+
+    <!-- Css links -->
+    <link rel="stylesheet" href="./assets/css/style.css " />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- ==================navbar==================== -->
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- LOGO -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold"
+          >
+            K
+          </div>
+          <span class="text-xl font-semibold">Kids Kings.</span>
+        </div>
+
+        <!-- MENU (Desktop) -->
+        <ul class="hidden md:flex items-center gap-6 text-gray-700">
+          <li class="px-4 py-2 bg-gray-200 rounded-full">Home</li>
+          <li class="hover:text-black cursor-pointer">About</li>
+          <li class="hover:text-black cursor-pointer">Shop</li>
+          <li class="hover:text-black cursor-pointer">Pages</li>
+          <li class="hover:text-black cursor-pointer">Blog</li>
+          <li class="hover:text-black cursor-pointer">Contact</li>
+        </ul>
+
+        <!-- RIGHT ICONS -->
+        <div class="flex items-center gap-3">
+          <!-- Hamburger -->
+          <button
+            id="menuBtn"
+            class="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-gray-100"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden flex-col bg-white border-t px-6 py-4 space-y-4 md:hidden"
+      >
+        <a href="#" class="block font-medium">Home</a>
+        <a href="#about" class="block">About</a>
+        <a href="#shop" class="block">Shop</a>
+        <a href="#pages" class="block">Pages</a>
+        <a href="#blog" class="block">Blog</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ============== nav end ====================== -->
+
+    <!-- ================= hero section ==================== -->
+    <!-- HERO SECTION -->
+    <section class="bg-green-100 pt-28 pb-16 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-10"
+      >
+        <!-- LEFT CONTENT -->
+        <div class="text-center md:text-left max-w-lg space-y-6">
+          <p class="text-gray-600 text-sm" id="tagline">
+            In this season, find the best 🔥
+          </p>
+
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight" id="heading">
+            Exclusive collection for everyone
+          </h1>
+
+          <button
+            id="ctaBtn"
+            class="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition"
+          >
+            Explore now
+          </button>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="relative">
+          <img
+            id="heroImg"
+            src="./assets/img/hero-img.png"
+            class="w-72 md:w-96 rotate-6 rounded-xl shadow-lg"
+          />
+
+          <!-- Floating Shape -->
+          <div
+            class="absolute -top-6 -left-6 w-16 h-16 bg-yellow-300 rounded-full"
+          ></div>
+          <div
+            class="absolute -bottom-6 -right-6 w-20 h-20 bg-pink-300 rounded-full"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ hero section end ===================== -->
+
+    <!-- CATEGORY SECTION -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <h2 class="text-2xl md:text-3xl font-semibold mb-10">Discover more</h2>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- CARD 1 -->
+          <div
+            class="group bg-pink-100 rounded-2xl p-6 flex items-center justify-between overflow-hidden hover:-translate-y-2 transition duration-300"
+          >
+            <!-- TEXT -->
+            <div class="space-y-3">
+              <p class="text-sm text-gray-600">Explore new arrivals</p>
+              <h3 class="text-xl font-semibold">For Boys</h3>
+              <button
+                class="mt-2 bg-white px-4 py-2 rounded-full text-sm shadow group-hover:bg-black group-hover:text-white transition"
+              >
+                Shop Now →
+              </button>
+            </div>
+
+            <!-- IMAGE -->
+            <img
+              src="./assets/img/boys-category.png"
+              class="w-28 group-hover:scale-110 transition duration-300"
+            />
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="group bg-yellow-100 rounded-2xl p-6 flex items-center justify-between overflow-hidden hover:-translate-y-2 transition duration-300"
+          >
+            <div class="space-y-3">
+              <p class="text-sm text-gray-600">Latest styles</p>
+              <h3 class="text-xl font-semibold">For Girls</h3>
+              <button
+                class="mt-2 bg-white px-4 py-2 rounded-full text-sm shadow group-hover:bg-black group-hover:text-white transition"
+              >
+                Shop Now →
+              </button>
+            </div>
+
+            <img
+              src="./assets/img/girls-category.png"
+              class="w-28 group-hover:scale-110 transition duration-300"
+            />
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="group bg-green-100 rounded-2xl p-6 flex items-center justify-between overflow-hidden hover:-translate-y-2 transition duration-300"
+          >
+            <div class="space-y-3">
+              <p class="text-sm text-gray-600">Trending now</p>
+              <h3 class="text-xl font-semibold">Summer Season</h3>
+              <button
+                class="mt-2 bg-white px-4 py-2 rounded-full text-sm shadow group-hover:bg-black group-hover:text-white transition"
+              >
+                Shop Now →
+              </button>
+            </div>
+
+            <img
+              src="./assets/img/summer-category.png"
+              class="w-28 scale-150 group-hover:scale-110 transition duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== category end ==================== -->
+
+    <!-- PRODUCT SECTION -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <h2 class="text-2xl md:text-3xl font-semibold mb-10">Best Sellers</h2>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- ======================= CARD ======================== -->
+          <div
+            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+          >
+            <!-- IMAGE -->
+            <div
+              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+            >
+              <img
+                src="./assets/img/dangri.png"
+                class="h-full object-contain group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <!-- CONTENT -->
+            <div class="mt-4 space-y-1">
+              <p class="text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium">Girls Dangri</h3>
+              <p class="font-semibold">₹799</p>
+
+              <!-- RATING -->
+              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐☆</p>
+            </div>
+          </div>
+
+          <!-- COPY CARD (duplicate for more products) -->
+          <div
+            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+          >
+            <!-- IMAGE FIXED -->
+            <div
+              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+            >
+              <img
+                src="./assets/img/sharara.png"
+                class="h-full object-contain group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <!-- CONTENT -->
+            <div class="mt-4">
+              <p class="text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium">Girls Sharara</h3>
+              <p class="font-semibold">₹1299</p>
+              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+
+          <!-- COPY CARD (duplicate for more products) -->
+          <div
+            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+          >
+            <div
+              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+            >
+              <img
+                src="./assets/img/3pcs.png"
+                class="h-full object-contain group-hover:scale-105 transition duration-300"
+              />
+            </div>
+            <div class="mt-4">
+              <p class="text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium">Boys 3pcs</h3>
+              <p class="font-semibold">₹1299</p>
+              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+
+          <!-- COPY CARD (duplicate for more products) -->
+          <div
+            class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition duration-300 relative"
+          >
+            <div
+              class="h-64 flex items-center justify-center bg-gray-50 rounded-xl"
+            >
+              <img
+                src="./assets/img/shirt.png"
+                class="h-full object-contain group-hover:scale-105 transition duration-300"
+              />
+            </div>
+            <div class="mt-4">
+              <p class="text-xs text-gray-500">Clothing</p>
+              <h3 class="font-medium">Boys Half Shirt</h3>
+              <p class="font-semibold">₹599</p>
+              <p class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== Product end ============================= -->
+
+    <!-- OFFER BANNER -->
+    <section class="py-16 bg-green-100">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10"
+      >
+        <!-- LEFT TEXT -->
+        <div class="space-y-5 text-center md:text-left max-w-md">
+          <p class="text-sm text-gray-600">Limited Time Offer 🎉</p>
+
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+            Up to 50% Off <br />
+            Summer Sale
+          </h2>
+
+          <p class="text-gray-600">
+            Grab the best styles for your little ones before the deal ends.
+          </p>
+
+          <button
+            class="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition"
+          >
+            Shop Now
+          </button>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="relative">
+          <img
+            src="./assets/img/banner-img.png"
+            class="w-72 md:w-96 rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= banner end ========================== -->
+
+    <!-- TESTIMONIALS -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <h2 class="text-2xl md:text-3xl font-semibold mb-8">
+          What People Say About Us
+        </h2>
+
+        <!-- SCROLL CONTAINER -->
+        <div
+          class="flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory"
+        >
+          <!-- CARD -->
+          <div
+            class="min-w-[280px] md:min-w-[320px] snap-start bg-gray-50 p-6 rounded-2xl shadow-sm"
+          >
+            <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+
+            <p class="text-gray-600 mb-4">
+              “Absolutely love the quality! The fabric feels premium.”
+            </p>
+
+            <div class="flex items-center gap-3">
+              <img src="https://via.placeholder.com/40" class="rounded-full" />
+              <div>
+                <p class="font-medium">Rahul Sharma</p>
+                <p class="text-sm text-gray-500">✔ Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="min-w-[280px] md:min-w-[320px] snap-start bg-gray-50 p-6 rounded-2xl shadow-sm"
+          >
+            <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+
+            <p class="text-gray-600 mb-4">
+              “Trendy designs and fast delivery. Highly recommended!”
+            </p>
+
+            <div class="flex items-center gap-3">
+              <img src="https://via.placeholder.com/40" class="rounded-full" />
+              <div>
+                <p class="font-medium">Anjali Verma</p>
+                <p class="text-sm text-gray-500">✔ Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="min-w-[280px] md:min-w-[320px] snap-start bg-gray-50 p-6 rounded-2xl shadow-sm"
+          >
+            <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+
+            <p class="text-gray-600 mb-4">
+              “Customer support helped me pick the perfect outfit!”
+            </p>
+
+            <div class="flex items-center gap-3">
+              <img src="https://via.placeholder.com/40" class="rounded-full" />
+              <div>
+                <p class="font-medium">Amit Singh</p>
+                <p class="text-sm text-gray-500">✔ Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== Testimonial ======================= -->
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-10">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10"
+      >
+        <!-- BRAND -->
+        <div>
+          <h2 class="text-white text-2xl font-semibold mb-4">Kids Kings.</h2>
+          <p class="text-sm text-gray-400">
+            Discover the best fashion for every season. Style that speaks for
+            you.
+          </p>
+        </div>
+
+        <!-- LINKS 1 -->
+        <div>
+          <h3 class="text-white font-medium mb-4">Company</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">About</li>
+            <li class="hover:text-white cursor-pointer">Careers</li>
+            <li class="hover:text-white cursor-pointer">Blog</li>
+            <li class="hover:text-white cursor-pointer">Contact</li>
+          </ul>
+        </div>
+
+        <!-- LINKS 2 -->
+        <div>
+          <h3 class="text-white font-medium mb-4">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Help Center</li>
+            <li class="hover:text-white cursor-pointer">Returns</li>
+            <li class="hover:text-white cursor-pointer">Shipping</li>
+            <li class="hover:text-white cursor-pointer">FAQs</li>
+          </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div>
+          <h3 class="text-white font-medium mb-4">Stay Updated</h3>
+          <p class="text-sm text-gray-400 mb-3">
+            Get latest offers and updates
+          </p>
+
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Enter email"
+              class="w-full px-4 py-2 rounded-l-full text-black outline-none"
+            />
+            <button
+              class="bg-white text-black px-4 py-2 rounded-r-full hover:bg-gray-200"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="text-center text-sm text-gray-500 mt-10">
+        © 2026 Kids Kings. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  </body>
+</html>
